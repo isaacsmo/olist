@@ -23,5 +23,8 @@ connection = sqlalchemy.create_engine( str_connection )
 for i in files_names:
     df_tmp = pd.read_csv(os.path.join(DATA_DIR, i))
     table_name = "tb_" + i.strip(".csv").replace("olist_", "").replace("_dataset", "")
-    df_tmp.to_sql(table_name, connection)
+    df_tmp.to_sql(  table_name, 
+                    connection,
+                    if_exists = 'replace',
+                    index = False)
 
