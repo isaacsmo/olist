@@ -6,7 +6,7 @@ import sqlalchemy
 # OS endereços de nosso projeto e sub pastas
 # os.path = modulo que da ferramentas para trabalhar nos camiinhos do meu sistema operacional.
 # Exemplo: me passa o caminho de onde o meu Python está executando
-BASE_DIR = os.path.dirname( os.path.dirname( os.path.abspath(__file__) ) )
+BASE_DIR = os.path.dirname( os.path.dirname( os.path.dirname( os.path.abspath(__file__) ) ) )
 DATA_DIR = os.path.join( BASE_DIR, "data")
 
 
